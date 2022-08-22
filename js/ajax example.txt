@@ -1,0 +1,20 @@
+$('.del_cart').click(function () {
+	$.ajax({
+		url: "vendor/cart_clear.php",
+		type: "POST",
+		data: ({}),
+		dataType: "text",
+		beforeSend: funcBC,
+		success: funcSC
+	});
+});
+
+
+
+
+function funcBC(){
+	// alert("data proces");
+};
+function funcSC(data) {
+	alert("cart_clear");	
+}
